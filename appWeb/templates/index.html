@@ -6,11 +6,46 @@
     <!--Este titulo es para la pestaña-->
     <title>A tope de power</title>
     
+    <style>
+        h1 {
+            color: blueviolet; font-size: 50px;
+        }
+
+        p{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 20px;
+        }
+    </style>
+    
 </head>
 <body>
     <main>
         <article>
             <h1>Mi página para ponerme en forma</h1>
+            <h4>Únete a nuestra Tribu</h4>
+
+            <form action="data.html" method="get">
+
+                <label for="nombre">
+                    Nombre:
+                </label>
+                <br>
+                <input type="text" id="name" name="nombre" required>
+                </br>
+                <label for="email">
+                    Email:
+                </label>
+                <br>
+                <input type="email" name="email" id="email" required>
+                </br>
+                <label for="edad">
+                    Edad:
+                </label>
+                <br>
+                <input type="number" name="number" id="number" required>
+                </br>
+                <input type="submit" value="Únete">
+            </form>
             <img src="static/espalda.jpg" alt="Imagen de espalda de mujer con barra">
             <p> Nuestra biología es, esencialmente, la de un recolector-cazador viviendo en un mundo de oficinas y entregas a domicilio.
                 El ejercicio no es un "lujo" moderno, sino un mantenimiento obligatorio para un diseño evolutivo que no ha cambiado en miles de años.
