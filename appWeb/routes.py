@@ -1,12 +1,17 @@
 from appWeb import app
 from flask import render_template
+from appWeb.forms import TribuForm
 
 
 
 
-@app.route("/")
+@app.route("/",methods=['GET','POST'])
 def base():
-    return render_template("index.html")
+    form = TribuForm()
+    if form.validate_on_submit():
+        return "Ya perteneces a nuestra Tribu!"
+    else:
+        return render_template("index.html", form=form)
 
 @app.route("/ejercicio")
 def ejercicio():
