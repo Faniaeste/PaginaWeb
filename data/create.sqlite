@@ -1,0 +1,8 @@
+CREATE TABLE "Clientes" (
+	"id"	INTEGER,
+	"Nombre"	TEXT NOT NULL,
+	"Email"	TEXT NOT NULL,
+	"Edad"	NUMERIC NOT NULL,
+	"¿Que deporte haces o te gustaria hacer?"	TEXT NOT NULL,
+	PRIMARY KEY("id" AUTOINCREMENT)
+);
