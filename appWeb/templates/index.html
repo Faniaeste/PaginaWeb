@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Este titulo es para la pestaña-->
     <title>A tope de power</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/pico.css') }}">
     
     <style>
         h1 {
@@ -16,40 +17,51 @@
             font-size: 20px;
         }
     </style>
-    
 </head>
-<body>
-    <main>
-        <article>
+    <body><main class="container">
+        <section id="header">
             <h1>Mi página para ponerme en forma</h1>
-            <h4>Únete a nuestra Tribu</h4>
+            <h3>Únete a nuestra Tribu</h3>
 
-            <form method="POST" action="">
-                        {{ form.hidden_tag() }}
-                        {{ form.name.label }}
-                        {{ form.name() }}
-                        {{ form.email.label }}
-                        {{ form.email() }}
-                        {{ form.edad.label }}
-                        {{ form.edad() }}
-                        {{ form.submit }}
+            <form>
+                <div class="grid">
+                    <input
+                    type="text"
+                    name="name"
+                    placeholder="Nombre"
+                    aria-label="name"
+                    required
+                    >
+                    <input
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                    aria-label="Email"
+                    autocomplete="email"
+                    required
+                    >
+                    <input
+                    type="number"
+                    name="edad"
+                    placeholder="Edad"
+                    aria-label="Email"
+                    autocomplete="edad"
+                    opcional
+                    >
+                    <button type="submit">ÚNETE</button>
             
-
-                        
-                        {% for error in form.name.errors %}
-                        <span style="color: red;">[{{ error }}]</span>
-                        {% endfor %}
-                        </p>
-
-            </form>
-
-           
-            
+          </div>
+        <form>
+    </section>
             <img src="static/espalda.jpg" alt="Imagen de espalda de mujer con barra">
-            <p> Nuestra biología es, esencialmente, la de un recolector-cazador viviendo en un mundo de oficinas y entregas a domicilio.
+
+            <section id="content">
+                <article><p>
+                Nuestra biología es, esencialmente, la de un recolector-cazador viviendo en un mundo de oficinas y entregas a domicilio.
                 El ejercicio no es un "lujo" moderno, sino un mantenimiento obligatorio para un diseño evolutivo que no ha cambiado en miles de años.
                 Por qué es vital hacer ejercicio hoy:
             </p>
+            <blockquote>
             <ol>
                 <p>   
                 <li>Genética "Ahorradora": Tus genes están programados para almacenar energía (grasa) para la próxima escasez que nunca llega. Sin ejercicio, ese almacenamiento se vuelve crónico y dañino.</li>
@@ -60,18 +72,27 @@
                 </p>
                 <li>En resumen: No hacemos ejercicio para "ponernos guapos", sino para convencer a nuestro cuerpo de que no estamos en peligro de extinción por falta de uso.</li>
             </ol>
+            </blockquote>
              
 
         </article>
+        </section>
 
-
+        <section id="links">
     </main>
     <h2>¡Vamos a ello!</h2>
-    <ul>
-        <li><a href="ejercicio" target="_blank">Ejercicio</a></li>
-        <li><a href="nutricion"target="_blank">Nutricion</a></li>
-    </ul>
+    <div class="grid">
+    <a href="ejercicio" role="button" target="_blank">🏋️ Ejercicio funcional</a>
+    <a href="nutricion" role="button" target="_blank" class="secondary">🍎 Alimentación real</a>
+    <a href="sol" role="button" target="_blank">☀️ Exposición al sol</a>
+    </div>
+
+    <div class="grid">
+        <a href="hidratacion" role="button" target="_blank" class="secondary">💧 Hidratación</a>
+        <a href="emociones" role="button" target="_blank">🧠 Emociones</a>
+        <div></div> </div>
+    </div>
+    </section>
     
-    
-</body>
-</html>
+        </body>
+    </html>
